@@ -12,12 +12,12 @@ public class AuthService {
 
     public AuthService() {
         this.userDataStore = new UserDataStore();
-        this.users = userDataStore.loadUsers();  // ইউজার লিস্ট ফাইল থেকে লোড করো
+        this.users = userDataStore.loadUsers();
 
         if (users.isEmpty()) {
-            // প্রথমে একটি Admin ইউজার দিয়ে দাও
+
             users.add(new Admin("admin01", "Super Admin", "admin@example.com", "adminpass"));
-            userDataStore.saveUsers(users);  // ফাইলে সেভ করো যেন পরবর্তীতে পাওয়া যায়
+            userDataStore.saveUsers(users);
         }
     }
 
@@ -29,7 +29,7 @@ public class AuthService {
             }
         }
         users.add(user);
-        userDataStore.saveUsers(users);  // নতুন ইউজার যুক্ত হলে ফাইল আপডেট করো
+        userDataStore.saveUsers(users);
         System.out.println("✅ User registered successfully: " + user.getName());
         return true;
     }

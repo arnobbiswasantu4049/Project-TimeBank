@@ -23,7 +23,7 @@ public abstract class User implements Serializable {
         this.services = new ArrayList<>();
     }
 
-    // Getter methods
+
     public String getUserId() {
         return userId;
     }
@@ -48,7 +48,7 @@ public abstract class User implements Serializable {
         return services;
     }
 
-    // Setter methods (optional)
+
     public void setName(String name) {
         this.name = name;
     }
@@ -65,19 +65,19 @@ public abstract class User implements Serializable {
         this.timeCredits = credits;
     }
 
-    // Add service to user's list
+
     public void addService(String service) {
         services.add(service);
     }
 
-    // Dashboard method — দেখাবে ইউজারের ড্যাশবোর্ড
+
     public void viewDashboard() {
         System.out.println("\n📊 User Dashboard for: " + name);
         System.out.println("🕒 Time Credits: " + timeCredits);
         System.out.println("🛠️ Services: " + services + "\n");
     }
 
-    // toString for debugging
+
     @Override
     public String toString() {
         return "User{" +
@@ -89,7 +89,7 @@ public abstract class User implements Serializable {
                 '}';
     }
 
-    // equals and hashCode based on email (unique)
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

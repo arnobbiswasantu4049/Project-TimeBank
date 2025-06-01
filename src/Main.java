@@ -14,7 +14,7 @@ public class Main {
             System.out.println("\n1. Register\n2. Login\n3. Exit");
             System.out.print("Select option: ");
             int option = scanner.nextInt();
-            scanner.nextLine();  // consume newline
+            scanner.nextLine();
 
             if (option == 1) {
                 System.out.print("Enter userId: ");
@@ -29,7 +29,7 @@ public class Main {
                 System.out.print("Enter password: ");
                 String password = scanner.nextLine();
 
-                // তুমি চাইলে RegularUser অথবা Admin বানাতে পারো, এখানে RegularUser ধরেছি
+
                 User newUser = new RegularUser(userId, name, email, password);
                 boolean registered = authService.register(newUser);
                 if (registered) {
@@ -47,7 +47,6 @@ public class Main {
                 if (loggedInUser != null) {
                     loggedInUser.viewDashboard();
 
-                    // যদি Admin হয়, তাহলে সব ইউজার দেখাও
                     if (loggedInUser instanceof Admin) {
                         ((Admin) loggedInUser).viewAllUsers(authService.getAllUsers());
                     }

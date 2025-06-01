@@ -8,7 +8,7 @@ public class Admin extends User {
         super(userId, name, email, password);
     }
 
-    // Show list of all users with details
+
     public void viewAllUsers(List<User> users) {
         System.out.println("\n=== All Registered Users ===");
         if (users.isEmpty()) {
@@ -20,10 +20,7 @@ public class Admin extends User {
         }
         System.out.println("============================\n");
     }
-
-    // Dummy ban user method (can be extended)
     public void banUser(User user) {
-        // এখানে তুমি চাইলে user object এ banned ফ্ল্যাগ সেট করতে পারো, এখন ডামি মেসেজ
         System.out.println("🚫 User '" + user.getName() + "' has been banned. (Dummy implementation)");
     }
 

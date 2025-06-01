@@ -30,7 +30,7 @@ public class RegularUser extends User {
         receivedRequests.add(request);
     }
 
-    // Override viewDashboard to show more info
+
     @Override
     public void viewDashboard() {
         System.out.println("\n📊 Regular User Dashboard for: " + getName());
@@ -40,7 +40,7 @@ public class RegularUser extends User {
         System.out.println("📥 Received Requests: " + receivedRequests + "\n");
     }
 
-    // toString for debugging
+
     @Override
     public String toString() {
         return "RegularUser{" +
