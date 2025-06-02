@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="timebank.controllers.LoginController">
+    <VBox spacing="10" layoutX="100" layoutY="100">
+        <Label text="Login to timebank"/>
+        <TextField fx:id="emailField" promptText="Email"/>
+        <PasswordField fx:id="passwordField" promptText="Password"/>
+        <Button text="Login" onAction="#handleLogin"/>
+        <Label fx:id="messageLabel" textFill="RED"/>
+    </VBox>
+</AnchorPane>
